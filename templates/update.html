@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/website_style.css">
+    <title>Israeli Government</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="header"><h1>Israeli Government</h1>
+</div>
+
+<div class="topnav">
+  <a href="/">Home</a>
+  <a href="search">View</a>
+  <a href="create">Create</a>
+  <a href="update">Update</a>
+    <a href="delete">Delete</a>
+      <a href="select">Select</a>
+
+</div>
+
+<form action="{{ url_for('update')}}" method="post" autocomplete="off">
+  <label for="gov_number">Government Number:</label><br>
+  <input type="text" id="gov_number" name="gov_number" value="36"><br><br>
+
+  <label for="prime_min">Prime Minister:</label><br>
+  <input type="text" id="prime_min" name="prime_min" value="5"><br><br>
+
+  <label for="start_date">Start Date:</label><br>
+  <input type="text" id="start_date" name="start_date" value="2019-06-20"><br><br>
+
+  <label for="recommendation_id">Recommendation ID:</label><br>
+  <input type="text" id="recommendation_id" name="recommendation_id" value="1"><br><br>
+
+  <input type="submit" value="Update"><br><br>
+
+  <div class="msg">{{ msg }}</div><br>
+</form>
+
+</body>
+</html>
